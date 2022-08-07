@@ -32,4 +32,4 @@ fig = ff.create_distplot(
          hist_data, group_labels, bin_size=[.1, .25, .5])
 
 # Plot!
-st.plotly_chart(fig, use_container_width=True)df)
+st.plotly_chart(fig, use_container_width=True)
