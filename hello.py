@@ -4,13 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 st.title("18 questions")
-name = st.text_input("Enter your name", "")
 
-st.write(f"Hello {name}!")
-
-
-
-st.checkbox('I agree')
 val=st.radio('Choose favourite pet', ['cats', 'dogs','guinea pigs'])
 st.write(f"user input value: {val}")
 
@@ -21,17 +15,14 @@ st.button('Save answer',key="save")
 
 poll=np.arange(0.0,5.0,1.0)
 if st.session_state.save:
+  
   poll[dict[val]]+=1
   np.savetxt("poll.txt",poll)
+  st.write(">>Saved")
 
 # plotting example
 
-
-arr = np.random.normal(1, 1, size=100)
-
 data = [23, 45, 56]
 fig, ax = plt.subplots()
-ax.bar(['cats', 'dogs','guinea pigs'], poll)
-#ax.hist(arr, bins=20)
-
+ax.bar(['cats', 'dogs','guinea pigs'], data)
 st.pyplot(fig)
