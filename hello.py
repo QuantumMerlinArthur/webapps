@@ -17,7 +17,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 arr = np.random.normal(1, 1, size=100)
+
+data = [23, 45, 56]
 fig, ax = plt.subplots()
-ax.hist(arr, bins=20)
+ax.bar([1,2,3], data)
+#ax.hist(arr, bins=20)
 
 st.pyplot(fig)
