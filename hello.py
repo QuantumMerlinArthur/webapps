@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
 st.title("18 questions")
 name = st.text_input("Enter your name", "")
 
@@ -22,8 +25,7 @@ if st.session_state.save:
   np.savetxt("poll.txt",poll)
 
 # plotting example
-import matplotlib.pyplot as plt
-import numpy as np
+
 
 arr = np.random.normal(1, 1, size=100)
 
