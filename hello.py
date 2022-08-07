@@ -12,7 +12,7 @@ st.radio('Pick one', ['cats', 'dogs'])
 st.selectbox('Pick one', ['cats', 'dogs'])
 st.multiselect('Buy', ['milk', 'apples', 'potatoes'])
 st.slider('Pick a number', 0, 100)
-st.select_slider('Pick a size
+
 
 
 
