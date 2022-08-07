@@ -16,9 +16,10 @@ dict = {"cats":0,"dogs":1,"guinea pigs":2}
 #st.write(f"array index: {dict[val]}")
 st.button('Save answer',key="save")
 
-poll=[0,0,0]
+poll=np.array([0,0,0])
 if st.session_state.save:
   poll[dict[val]]+=1
+  np.savetxt("poll.txt",poll)
 
 # plotting example
 import matplotlib.pyplot as plt
