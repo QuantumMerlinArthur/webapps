@@ -5,18 +5,31 @@ name = st.text_input("Enter your name", "")
 
 st.write(f"Hello {name}!")
 
-val=st.button('Click me')
-st.write(f"Button value:{val}")
+st.button('Click me')
+
 st.checkbox('I agree')
-st.radio('Pick one', ['cats', 'dogs'])
-st.selectbox('Pick one', ['cats', 'dogs'])
-st.multiselect('Buy', ['milk', 'apples', 'potatoes'])
-st.slider('Pick a number', 0, 100)
+val=st.radio('Pick one', ['cats', 'dogs'])
+st.write(f"user input value:{val}")
 
 
+# plotting example
 
+import plotly.figure_factory as ff
+import numpy as np
 
-x = st.slider("Select an integer x", 0, 10, 1)
-y = st.slider("Select an integer y", 0, 10, 1)
-df = pd.DataFrame({"x": [x], "y": [y] , "x + y": [x + y]}, index = ["addition row"])
-st.write(df)
+# Add histogram data
+x1 = np.random.randn(200) - 2
+x2 = np.random.randn(200)
+x3 = np.random.randn(200) + 2
+
+# Group data together
+hist_data = [x1, x2, x3]
+
+group_labels = ['Group 1', 'Group 2', 'Group 3']
+
+# Create distplot with custom bin_size
+fig = ff.create_distplot(
+         hist_data, group_labels, bin_size=[.1, .25, .5])
+
+# Plot!
+st.plotly_chart(fig, use_container_width=True)df)
