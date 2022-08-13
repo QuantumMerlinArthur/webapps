@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 # database sql
 import mysql.connector
-mysql.connector.connect(host='remotemysql.com:3306',database='QtbVDcLbg8',user='QtbVDcLbg8',password='EO3VPt1koW')
+mysql.connector.connect(host='https.//remotemysql.com:3306',database='QtbVDcLbg8',user='QtbVDcLbg8',password='EO3VPt1koW')
 
 ##### main page
 st.title("18 questions")
