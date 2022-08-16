@@ -29,7 +29,8 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 st.title("18 questions")
 
-st.write(rows[0])
+for row in rows:
+    st.write(row)
 
 
 val=st.radio('Choose favourite pet', ['cats', 'dogs','guinea pigs'])
