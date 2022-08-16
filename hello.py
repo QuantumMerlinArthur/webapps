@@ -22,17 +22,43 @@ def run_query(query):
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
+############# questions and stuff
+fragen=['1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkommen. Wo liegt dieser Anteil heute?',
+       ' Welchen Anteil haben Fischeri, Land- und Forstwirtschaft and der Weltwirtschaft?',
+       'In wie vielen Ländern gelten Gesetze gegen sexuelle Belästigung?',
+       'Welcher Anteil der Welbevölkerung lebt in Megacitys (mehr als 10 Millionen Menschen)',
+       'Welcher Anteil der Erderwärmung wird von den Ozeanen aufgenommen. (Wärmeenergie, nicht CO2)',
+       'Welcher Anteil des weltweiten Plastimülls landet in den Ozeanen?',
+       'Wie viele der 140.000 evaluerten Tier- und Pflanzenarten sind gefährdet oder bedroht?',
+       'Wie viele Menschen auf der Welt sind international auf der Flucht? (Keine Binnenflüchtlinge)',
+       'Einkommensstarke Länder bekommen welchen Anteil ihrer Einkünfte aus Zöllen und Importabgaben?',
+       'Eight billion people in the world today. Which map best shows where they live? (Each figure:  1 billion people.)',
+       'Wie hat sich der gesamte, jährliche Rohstoffverbrauch der Welt seit 2000 geändert?',
+       'Welche Ländern haben in den letzten 5 Jahren die meisten Truppen für die UN-Friedenstruppen (Blauhelme) gestellt?',
+       'Welcher Anteil der Bevölkerung der Länder mit hohem Einkommen (wie Deutschland, USA) lebt in extremer Armut ( <2$/Tag)',
+       'Welcher Anteil der Weltbevölkerung hat nicht genug  Essen, um den täglichen Bedarf zu decken? ',
+       'Wie hat sich die globale Suizidrate in den letzten 20 Jahren entwickelt? ',
+       'Wie viele Unternehmen weltweit werden von einer Frau als Top-Managerin oder CEO geleitet? ',
+       'Wie viele Mädchen gingen mind. bis zum Alter von 11 Jahren in einkommensschwachen Ländern zur Schule? (vor Corona)',
+       'Wie viele Menschen haben Zugang zu sauberem Trinkwasser in oder nahe ihres Zuhauses?',
+       'Welchen Anteil haben Kohle, Öl und Gas am gesamten Energieverbrauch der Welt?']
 
 
 ##### main page
-
-
 st.title("18 questions")
 
+#[     for row in rows]
+
 for row in rows:
-    st.write(row.Zeitstempel)
+    st.write(row["Zeitstempel"])
     st.write(type(row))
 
+#add name and study subject
+results=pd.DataFrame
+    
+    
+    
+########## old
 
 val=st.radio('Choose favourite pet', ['cats', 'dogs','guinea pigs'])
 st.write(f"user input value: {val}")
