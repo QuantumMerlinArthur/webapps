@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as nps
 
 ##### main page
-df = pd.readcsv("Factfulness Test.csv")
-st.write(df[0])
+
 
 st.title("18 questions")
 
