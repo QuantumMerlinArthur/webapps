@@ -22,12 +22,15 @@ def run_query(query):
 sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-st.write(rows[0])
+
 
 ##### main page
 
 
 st.title("18 questions")
+
+st.write(type(rows))
+
 
 val=st.radio('Choose favourite pet', ['cats', 'dogs','guinea pigs'])
 st.write(f"user input value: {val}")
