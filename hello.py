@@ -29,7 +29,7 @@ st.title("19 questions")
 #st.write([ [  row.f  for row in rows] for f in fragen  ])
 
 for row in rows:
-    st.write(row[Zeitstempel])
+    st.write(row["Zeitstempel"])
     #st.write(type(row))
 
 #add name and study subject
