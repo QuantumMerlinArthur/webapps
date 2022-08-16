@@ -31,6 +31,7 @@ st.title("18 questions")
 
 for row in rows:
     st.write(row.Zeitstempel)
+    st.write(type(row))
 
 
 val=st.radio('Choose favourite pet', ['cats', 'dogs','guinea pigs'])
