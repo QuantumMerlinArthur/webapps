@@ -48,7 +48,7 @@ st.title("19 questions")
 #st.write([ [  row.f  for row in rows] for f in fragen  ])
 
 for row in rows:
-    st.write(row['1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkommen. Wo liegt dieser Anteil heute?'])
+    st.write(row.1990)
     #st.write(type(row))
 
 #add name and study subject
