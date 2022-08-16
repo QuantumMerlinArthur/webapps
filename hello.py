@@ -23,7 +23,8 @@ sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 ############# questions and stuff
-row.'1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkommen. Wo liegt dieser Anteil heute?',
+'''
+'1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkommen. Wo liegt dieser Anteil heute?',
        ' Welchen Anteil haben Fischeri, Land- und Forstwirtschaft and der Weltwirtschaft?',
        'In wie vielen Ländern gelten Gesetze gegen sexuelle Belästigung?',
        'Welcher Anteil der Welbevölkerung lebt in Megacitys (mehr als 10 Millionen Menschen)',
@@ -42,6 +43,8 @@ row.'1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkommen. W
        'Wie viele Mädchen gingen mind. bis zum Alter von 11 Jahren in einkommensschwachen Ländern zur Schule? (vor Corona)',
        'Wie viele Menschen haben Zugang zu sauberem Trinkwasser in oder nahe ihres Zuhauses?',
        'Welchen Anteil haben Kohle, Öl und Gas am gesamten Energieverbrauch der Welt?']
+'''
+
 ##### main page
 st.title("19 questions")
 
