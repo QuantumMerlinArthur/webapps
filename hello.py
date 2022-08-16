@@ -9,12 +9,7 @@ import numpy as nps
 
 ### data
 
-testString = io.StringIO(""" Frage,Antwort,Anzahl
-1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkommen. Wo liegt dieser Anteil heute?,richtig,2
-1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkommen. Wo liegt dieser Anteil heute?,ca. 9%,2
-""");
-final = pd.read_csv(testString,sep=",")
-final=final.set_index(["Frage","Antwort"])
+
 ##### main page
 st.title("19 questions")
 
