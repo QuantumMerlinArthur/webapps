@@ -88,7 +88,7 @@ Wie viele Menschen haben Zugang zu sauberem Trinkwasser in oder nahe ihres Zuhau
 "Welchen Anteil haben Kohle, Öl und Gas am gesamten Energieverbrauch der Welt?",ca. 82%,1
 """);
 final = pd.read_csv(testString,sep=",")
-
+final=final.set_index(["Frage","Antwort"])
 ##### main page
 st.title("19 questions")
 
