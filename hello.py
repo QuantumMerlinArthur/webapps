@@ -47,10 +47,10 @@ fragen=['1990 lebten 58% der Weltbevölkerung in Ländern mit niedrigen Einkomme
 ##### main page
 st.title("18 questions")
 
-#[     for row in rows]
+st.write([ [  row.f  for row in rows] for f in fragen  ])
 
 for row in rows:
-    st.write(row["Zeitstempel"])
+    st.write(row.Zeitstempel)
     st.write(type(row))
 
 #add name and study subject
